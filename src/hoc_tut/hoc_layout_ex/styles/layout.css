@@ -1,0 +1,42 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+.li-item {
+    list-style-type: none;
+}
+.list-item {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.sidebar {
+    background-color: #555;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    /* Sidebar height to 100% */
+    padding: 1rem;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* Center main content vertically */
+    justify-content: center;
+    /* Center main content horizontally */
+}
+
+.center-content {
+    text-align: center;
+    margin-bottom: 50px;
+    /* Center content text */
+}

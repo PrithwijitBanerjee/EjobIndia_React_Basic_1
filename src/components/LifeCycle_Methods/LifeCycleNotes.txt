@@ -1,0 +1,42 @@
+Class component ----  It has a specific lifecycle . It follows the life cycle methods  through out its execution.
+
+Functional component ---- We do not have any lifecycle methods. Functional component does not have a lifecycle.
+
+Class Component ---- it has 5 stages :
+
+1. Initialisation state (state 1): it will initialise the  initial state object and the props.
+    
+     constructor()----> it will initialise the state and props with initial value.
+
+2. Mounting state / Loading state (state 2): in this state the class component will
+be loaded . A component is putting on the DOM tree...
+Mounting means putting elements into the DOM.
+
+   static getStateDerivedFromProps(state, props) ---> static methods that creates a state from props that are passed from parent component 
+   componentWillMount()
+   render()----> this will return from the component
+   componentDidMount()
+
+Note: ---> Overriden of render() method is needed to display the UI on the screen, rest methods are optional...
+
+3. Updating state (state 3): when we will update any state property in my component 
+using setState() then my component will move to the updating state.
+
+     static getStateDerivedFromProps(state, props) ---> static methods that creates a state from props that are passed from parent component 
+     shouldComponentUpdate() ---> it is a boolean functions which returns true/false (by default it returns true)
+	 if this method will return false then the state update will not be done.
+	 componentWillUpdate()
+	 render() ----->this will rendered the updated data  from the component of the DOM Tree
+     componentDidUpdate()
+
+Note:  In Updating phase, getStateDerivedFromProps() static methods that called first ...     
+Note: ---> Overriden of render() method is needed to display the UI on the screen, rest methods are optional...
+
+4. Unmounting state / Unloading state (state 4): When my component will be unloaded
+then it will be in unmounting state. A component is removed from the DOM tree....
+     
+	 componentWillUnmount()
+
+5. Error Handling ...
+
+    componentDidCatch(error, errorInfo) ----> 
